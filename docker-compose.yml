@@ -1,0 +1,35 @@
+# Docker Compose for Zettel (YouTube Keyword & Comment Analyzer)
+# SQLite는 Docker 컨테이너 불필요 - 개발 편의를 위한 설정
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - ./data:/app/data  # SQLite DB 파일 저장
+    environment:
+      - YOUTUBE_API_KEY=${YOUTUBE_API_KEY}
+      - DATABASE_URL=sqlite:///./data/zettel.db
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    command: npm run dev -- --host
+    depends_on:
+      - backend
+
+volumes:
+  data:
