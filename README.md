@@ -1,5 +1,7 @@
 # ViewPulse - YouTube 분석 도구
 
+> **바이브랩스 오픈톡방**: https://open.kakao.com/o/gfYQfFPh
+
 바이브코딩 채널 성장을 위한 데이터 분석 도구
 
 ## 주요 기능
