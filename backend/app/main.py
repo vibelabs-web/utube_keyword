@@ -7,7 +7,7 @@ from app.routers import youtube, comments
 
 # FastAPI app instance
 app = FastAPI(
-    title="Zettel API",
+    title="ViewPulse API",
     description="Backend API for Zettel - YouTube Transcript Note-taking System",
     version="0.1.0",
     docs_url="/docs",
@@ -28,7 +28,7 @@ app.add_middleware(
 async def health_check():
     return {
         "status": "healthy",
-        "service": "zettel-api",
+        "service": "viewpulse-api",
         "version": "0.1.0"
     }
 

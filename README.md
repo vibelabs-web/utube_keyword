@@ -1,4 +1,4 @@
-# Zettel - YouTube 분석 도구
+# ViewPulse - YouTube 분석 도구
 
 바이브코딩 채널 성장을 위한 데이터 분석 도구
 
@@ -45,8 +45,8 @@
 
 #### 1. 저장소 클론
 ```bash
-git clone https://github.com/username/zettel.git
-cd zettel
+git clone https://github.com/username/viewpulse.git
+cd viewpulse
 ```
 
 #### 2. 환경 변수 설정
@@ -168,7 +168,7 @@ Content-Type: application/json
 ## 프로젝트 구조
 
 ```
-zettel/
+viewpulse/
 ├── backend/
 │   ├── app/
 │   │   ├── api/              # API 엔드포인트 (레거시)
@@ -302,7 +302,7 @@ MIT License
 
 ## 문의
 
-프로젝트 관련 문의: [GitHub Issues](https://github.com/username/zettel/issues)
+프로젝트 관련 문의: [GitHub Issues](https://github.com/username/viewpulse/issues)
 
 ## 감사의 말
 
