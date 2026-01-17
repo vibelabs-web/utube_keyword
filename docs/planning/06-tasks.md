@@ -126,7 +126,7 @@ flowchart TD
 
 ## M0: 프로젝트 셋업
 
-### [ ] Phase 0, T0.1: 백엔드 프로젝트 초기화
+### [x] Phase 0, T0.1: 백엔드 프로젝트 초기화
 
 **담당**: backend-specialist
 
@@ -151,7 +151,7 @@ flowchart TD
 
 ---
 
-### [ ] Phase 0, T0.2: YouTube API 연동
+### [x] Phase 0, T0.2: YouTube API 연동
 
 **담당**: backend-specialist
 
@@ -172,7 +172,7 @@ flowchart TD
 
 ---
 
-### [ ] Phase 0, T0.3: 프론트엔드 프로젝트 초기화
+### [x] Phase 0, T0.3: 프론트엔드 프로젝트 초기화
 
 **담당**: frontend-specialist
 
@@ -196,7 +196,7 @@ flowchart TD
 
 ---
 
-### [ ] Phase 0, T0.4: 공통 UI 컴포넌트 구현
+### [x] Phase 0, T0.4: 공통 UI 컴포넌트 구현
 
 **담당**: frontend-specialist
 
@@ -224,7 +224,7 @@ flowchart TD
 
 ## M0.5: 계약 & 테스트 기반
 
-### [ ] Phase 0, T0.5.1: API 계약 정의
+### [x] Phase 0, T0.5.1: API 계약 정의
 
 **담당**: backend-specialist
 
@@ -246,7 +246,7 @@ flowchart TD
 
 ---
 
-### [ ] Phase 0, T0.5.2: 백엔드 테스트 환경 셋업
+### [x] Phase 0, T0.5.2: 백엔드 테스트 환경 셋업
 
 **담당**: test-specialist
 
@@ -268,7 +268,7 @@ flowchart TD
 
 ---
 
-### [ ] Phase 0, T0.5.3: 프론트엔드 Mock 환경 셋업
+### [x] Phase 0, T0.5.3: 프론트엔드 Mock 환경 셋업
 
 **담당**: frontend-specialist
 
@@ -295,7 +295,7 @@ flowchart TD
 
 ## M1: 키워드 분석 (FEAT-1)
 
-### [ ] Phase 1, T1.1: 키워드 분석 API RED→GREEN
+### [x] Phase 1, T1.1: 키워드 분석 API RED→GREEN
 
 **담당**: backend-specialist
 
@@ -361,7 +361,7 @@ git worktree remove ../zettel-phase1-keyword-api && git branch -d phase/1-keywor
 
 ---
 
-### [ ] Phase 1, T1.2: 관련 키워드 추출 RED→GREEN
+### [x] Phase 1, T1.2: 관련 키워드 추출 RED→GREEN
 
 **담당**: backend-specialist
 
@@ -402,7 +402,7 @@ cd ../zettel-phase1-related-keywords
 
 ---
 
-### [ ] Phase 1, T1.3: 키워드 분석 UI RED→GREEN
+### [x] Phase 1, T1.3: 키워드 분석 UI RED→GREEN
 
 **담당**: frontend-specialist
 
@@ -444,7 +444,7 @@ cd ../zettel-phase1-keyword-ui
 
 ---
 
-### [ ] Phase 1, T1.4: 키워드 결과 표시 컴포넌트 RED→GREEN
+### [x] Phase 1, T1.4: 키워드 결과 표시 컴포넌트 RED→GREEN
 
 **담당**: frontend-specialist
 
@@ -475,7 +475,7 @@ cd ../zettel-phase1-keyword-result
 
 ## M2: 댓글 분석 (FEAT-2)
 
-### [ ] Phase 2, T2.1: 댓글 수집 API RED→GREEN
+### [x] Phase 2, T2.1: 댓글 수집 API RED→GREEN
 
 **담당**: backend-specialist
 
@@ -517,7 +517,7 @@ cd ../zettel-phase2-comment-api
 
 ---
 
-### [ ] Phase 2, T2.2: 텍스트 분석 서비스 RED→GREEN
+### [x] Phase 2, T2.2: 텍스트 분석 서비스 RED→GREEN
 
 **담당**: backend-specialist
 
@@ -547,7 +547,7 @@ cd ../zettel-phase2-text-analysis
 
 ---
 
-### [ ] Phase 2, T2.3: 댓글 분석 UI RED→GREEN
+### [x] Phase 2, T2.3: 댓글 분석 UI RED→GREEN
 
 **담당**: frontend-specialist
 
@@ -577,7 +577,7 @@ cd ../zettel-phase2-comment-ui
 
 ---
 
-### [ ] Phase 2, T2.4: 댓글 분석 결과 컴포넌트 RED→GREEN
+### [x] Phase 2, T2.4: 댓글 분석 결과 컴포넌트 RED→GREEN
 
 **담당**: frontend-specialist
 
@@ -610,7 +610,7 @@ cd ../zettel-phase2-comment-result
 
 ## M3: UI/UX 통합
 
-### [ ] Phase 3, T3.1: 탭 네비게이션 RED→GREEN
+### [x] Phase 3, T3.1: 탭 네비게이션 RED→GREEN
 
 **담당**: frontend-specialist
 
@@ -639,7 +639,7 @@ cd ../zettel-phase3-navigation
 
 ---
 
-### [ ] Phase 3, T3.2: 에러 처리 UI RED→GREEN
+### [x] Phase 3, T3.2: 에러 처리 UI RED→GREEN
 
 **담당**: frontend-specialist
 
@@ -668,7 +668,7 @@ cd ../zettel-phase3-error
 
 ---
 
-### [ ] Phase 3, T3.3: 로딩 상태 UI RED→GREEN
+### [x] Phase 3, T3.3: 로딩 상태 UI RED→GREEN
 
 **담당**: frontend-specialist
 
@@ -699,7 +699,7 @@ cd ../zettel-phase3-loading
 
 ## M4: 마무리 & 배포
 
-### [ ] Phase 4, T4.1: E2E 테스트 RED→GREEN
+### [x] Phase 4, T4.1: E2E 테스트 RED→GREEN
 
 **담당**: test-specialist
 
@@ -729,7 +729,7 @@ cd ../zettel-phase4-e2e
 
 ---
 
-### [ ] Phase 4, T4.2: 최종 통합 및 문서화
+### [x] Phase 4, T4.2: 최종 통합 및 문서화
 
 **담당**: backend-specialist, frontend-specialist
 

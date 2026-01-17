@@ -1,13 +1,53 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* Pretendard 폰트 */
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
+/* Tailwind 4.x Theme Configuration */
+@theme {
+  /* Colors */
+  --color-primary: #ff0000;
+  --color-primary-dark: #cc0000;
+  --color-surface: #ffffff;
+  --color-background: #f8fafc;
+
+  /* Typography */
+  --font-family-sans: 'Pretendard', system-ui, -apple-system, sans-serif;
+  --font-family-mono: 'Roboto Mono', monospace;
+
+  /* Animation */
+  --animate-spin: spin 1s linear infinite;
+
+  /* Screens (breakpoints already defined by Tailwind) */
+}
+
+/* Animations */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Utility Classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 /* 기본 스타일 */
 body {
-  @apply bg-slate-50 text-slate-900;
+  background-color: #f8fafc;
+  color: #0f172a;
   font-family: 'Pretendard', system-ui, -apple-system, sans-serif;
   margin: 0;
   min-width: 320px;
@@ -15,26 +55,53 @@ body {
 }
 
 /* 버튼 유틸리티 */
-@layer components {
-  .btn {
-    @apply px-4 py-2 rounded-lg font-medium transition-colors;
-  }
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: colors 0.2s;
+}
 
-  .btn-primary {
-    @apply bg-red-600 text-white hover:bg-red-700;
-  }
+.btn-primary {
+  background-color: #dc2626;
+  color: white;
+}
 
-  .btn-secondary {
-    @apply border border-slate-300 text-slate-700 hover:bg-slate-50;
-  }
+.btn-primary:hover {
+  background-color: #b91c1c;
+}
 
-  .card {
-    @apply bg-white rounded-xl border border-slate-200 shadow-sm p-4;
-  }
+.btn-secondary {
+  border: 1px solid #cbd5e1;
+  color: #334155;
+}
 
-  .input {
-    @apply w-full px-4 py-2 border border-slate-300 rounded-lg;
-    @apply focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent;
-    @apply placeholder:text-slate-400;
-  }
+.btn-secondary:hover {
+  background-color: #f8fafc;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  padding: 1rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+}
+
+.input:focus {
+  outline: none;
+  ring: 2px;
+  ring-color: #ef4444;
+  border-color: transparent;
+}
+
+.input::placeholder {
+  color: #94a3b8;
 }

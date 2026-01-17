@@ -34,6 +34,14 @@ htmlcov/
 .pytest_cache/
 .coverage
 
+# Database
+*.db
+*.db-journal
+data/*.db
+
+# Docker
+.docker/
+
 # Misc
 tmp/
 temp/
