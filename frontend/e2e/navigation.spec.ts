@@ -51,8 +51,8 @@ test.describe('네비게이션', () => {
   }) => {
     await page.goto('/comments');
 
-    // 로고나 헤더 타이틀 클릭 (YouTube Zettel 텍스트)
-    const logo = page.locator('header').getByText(/YouTube Zettel/i);
+    // 로고나 헤더 타이틀 클릭 (YouTube ViewPulse 텍스트)
+    const logo = page.locator('header').getByText(/YouTube ViewPulse/i);
     if (await logo.isVisible()) {
       await logo.click();
 

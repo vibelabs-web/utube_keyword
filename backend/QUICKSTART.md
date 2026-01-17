@@ -13,7 +13,7 @@ API 키 발급: https://console.cloud.google.com/
 ## 2. 서버 실행
 
 ```bash
-cd /Users/futurewave/Documents/dev/zettel/backend
+cd /Users/futurewave/Documents/dev/viewpulse/backend
 uvicorn app.main:app --reload --port 8000
 ```
 

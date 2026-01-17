@@ -283,7 +283,7 @@ wait
 ### Python 테스트 스크립트
 
 ```bash
-cd /Users/futurewave/Documents/dev/zettel
+cd /Users/futurewave/Documents/dev/viewpulse
 python backend/test_youtube_service.py
 ```
 

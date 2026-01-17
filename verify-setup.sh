@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Setup Verification Script for Zettel
+# Setup Verification Script for ViewPulse
 # Verifies that all required files and configurations are in place
 
 set -e
@@ -13,7 +13,7 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 echo -e "${BLUE}=========================================="
-echo "Zettel Setup Verification"
+echo "ViewPulse Setup Verification"
 echo -e "==========================================${NC}"
 echo ""
 

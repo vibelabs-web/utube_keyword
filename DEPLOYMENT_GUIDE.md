@@ -1,4 +1,4 @@
-# Zettel - 배포 가이드
+# ViewPulse - 배포 가이드
 
 프로덕션 환경 배포를 위한 단계별 가이드
 
@@ -29,8 +29,8 @@ sudo sh get-docker.sh
 
 ```bash
 # 서버에 프로젝트 클론
-git clone https://github.com/username/zettel.git
-cd zettel
+git clone https://github.com/username/viewpulse.git
+cd viewpulse
 
 # 환경 변수 설정
 cp .env.example .env
@@ -53,7 +53,7 @@ curl http://localhost:5173/
 #### 4. Nginx 리버스 프록시 설정 (선택사항)
 
 ```nginx
-# /etc/nginx/sites-available/zettel
+# /etc/nginx/sites-available/viewpulse
 server {
     listen 80;
     server_name your-domain.com;
@@ -80,7 +80,7 @@ server {
 
 ```bash
 # Nginx 설정 활성화
-sudo ln -s /etc/nginx/sites-available/zettel /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/viewpulse /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo systemctl reload nginx
 ```
@@ -108,8 +108,8 @@ sudo apt-get update
 sudo apt-get install -y python3.11 python3.11-venv
 
 # 프로젝트 클론
-git clone https://github.com/username/zettel.git
-cd zettel/backend
+git clone https://github.com/username/viewpulse.git
+cd viewpulse/backend
 
 # 가상환경 생성
 python3.11 -m venv venv
@@ -135,18 +135,18 @@ gunicorn app.main:app \
 #### 2. 백엔드 Systemd 서비스
 
 ```ini
-# /etc/systemd/system/zettel-backend.service
+# /etc/systemd/system/viewpulse-backend.service
 [Unit]
-Description=Zettel Backend API
+Description=ViewPulse Backend API
 After=network.target
 
 [Service]
 Type=notify
 User=www-data
 Group=www-data
-WorkingDirectory=/opt/zettel/backend
-Environment="PATH=/opt/zettel/backend/venv/bin"
-ExecStart=/opt/zettel/backend/venv/bin/gunicorn app.main:app \
+WorkingDirectory=/opt/viewpulse/backend
+Environment="PATH=/opt/viewpulse/backend/venv/bin"
+ExecStart=/opt/viewpulse/backend/venv/bin/gunicorn app.main:app \
   --workers 4 \
   --worker-class uvicorn.workers.UvicornWorker \
   --bind 0.0.0.0:8000
@@ -159,9 +159,9 @@ WantedBy=multi-user.target
 ```bash
 # 서비스 활성화
 sudo systemctl daemon-reload
-sudo systemctl enable zettel-backend
-sudo systemctl start zettel-backend
-sudo systemctl status zettel-backend
+sudo systemctl enable viewpulse-backend
+sudo systemctl start viewpulse-backend
+sudo systemctl status viewpulse-backend
 ```
 
 #### 3. 프론트엔드 배포
@@ -172,16 +172,16 @@ curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 # 프론트엔드 빌드
-cd /opt/zettel/frontend
+cd /opt/viewpulse/frontend
 npm install
 npm run build
 
 # Nginx 설정
-sudo cp nginx.conf /etc/nginx/sites-available/zettel-frontend
+sudo cp nginx.conf /etc/nginx/sites-available/viewpulse-frontend
 
 # 빌드 파일 복사
-sudo mkdir -p /var/www/zettel
-sudo cp -r dist/* /var/www/zettel/
+sudo mkdir -p /var/www/viewpulse
+sudo cp -r dist/* /var/www/viewpulse/
 
 # Nginx 재시작
 sudo systemctl reload nginx
@@ -215,23 +215,23 @@ docker compose up -d
 
 ```bash
 # SQLite 데이터베이스 백업
-docker compose exec backend sqlite3 /app/data/zettel.db ".backup /app/data/backup-$(date +%Y%m%d).db"
+docker compose exec backend sqlite3 /app/data/viewpulse.db ".backup /app/data/backup-$(date +%Y%m%d).db"
 
 # 백업 파일 다운로드
-docker cp zettel-backend-1:/app/data/backup-20260117.db ./backup-20260117.db
+docker cp viewpulse-backend-1:/app/data/backup-20260117.db ./backup-20260117.db
 
 # 또는 직접 복사
-cp data/zettel.db data/backup-$(date +%Y%m%d).db
+cp data/viewpulse.db data/backup-$(date +%Y%m%d).db
 ```
 
 ### 복원
 
 ```bash
 # 백업 파일 업로드
-docker cp ./backup-20260117.db zettel-backend-1:/app/data/
+docker cp ./backup-20260117.db viewpulse-backend-1:/app/data/
 
 # 복원
-docker compose exec backend sqlite3 /app/data/zettel.db ".restore /app/data/backup-20260117.db"
+docker compose exec backend sqlite3 /app/data/viewpulse.db ".restore /app/data/backup-20260117.db"
 ```
 
 ### 마이그레이션
@@ -298,7 +298,7 @@ git pull origin main
 diff .env .env.example
 
 # 3. 백업 생성
-cp data/zettel.db data/backup-before-update-$(date +%Y%m%d).db
+cp data/viewpulse.db data/backup-before-update-$(date +%Y%m%d).db
 
 # 4. 컨테이너 재빌드 및 재시작
 docker compose down
@@ -322,7 +322,7 @@ docker compose down
 git checkout <previous-commit>
 
 # 3. 데이터베이스 복원
-cp data/backup-before-update-20260117.db data/zettel.db
+cp data/backup-before-update-20260117.db data/viewpulse.db
 
 # 4. 컨테이너 재시작
 docker compose up -d --build
@@ -404,10 +404,10 @@ location /api {
 
 ```bash
 # SQLite VACUUM (정기적으로 실행)
-docker compose exec backend sqlite3 /app/data/zettel.db "VACUUM;"
+docker compose exec backend sqlite3 /app/data/viewpulse.db "VACUUM;"
 
 # 인덱스 확인
-docker compose exec backend sqlite3 /app/data/zettel.db ".schema"
+docker compose exec backend sqlite3 /app/data/viewpulse.db ".schema"
 ```
 
 ## 트러블슈팅
@@ -448,7 +448,7 @@ docker stats
 docker compose exec backend top
 
 # 데이터베이스 최적화
-docker compose exec backend sqlite3 /app/data/zettel.db "VACUUM; ANALYZE;"
+docker compose exec backend sqlite3 /app/data/viewpulse.db "VACUUM; ANALYZE;"
 ```
 
 ## 고급 설정
@@ -478,7 +478,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /opt/zettel
+            cd /opt/viewpulse
             git pull
             docker compose up -d --build
 ```

@@ -5,7 +5,7 @@ import App from '../App';
 describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
-    expect(screen.getByText('Zettel')).toBeInTheDocument();
+    expect(screen.getByText('ViewPulse')).toBeInTheDocument();
   });
 
   it('displays keyword analysis page by default', () => {

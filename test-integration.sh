@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Integration Test Script for Zettel
+# Integration Test Script for ViewPulse
 # Tests frontend-backend connectivity
 
 set -e
 
 echo "=========================================="
-echo "Zettel Integration Test"
+echo "ViewPulse Integration Test"
 echo "=========================================="
 echo ""
 

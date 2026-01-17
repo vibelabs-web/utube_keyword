@@ -6,7 +6,7 @@ TDD 워크플로우를 따라 YouTube 댓글 수집 API를 구현했습니다.
 ## 구현된 파일
 
 ### 1. 테스트 파일
-- **파일**: `/Users/futurewave/Documents/dev/zettel/backend/tests/api/test_comments.py`
+- **파일**: `/Users/futurewave/Documents/dev/viewpulse/backend/tests/api/test_comments.py`
 - **테스트 케이스**:
   - `test_analyze_comments_success`: 댓글 분석 성공 케이스
   - `test_analyze_comments_video_info`: 비디오 정보 검증
@@ -16,7 +16,7 @@ TDD 워크플로우를 따라 YouTube 댓글 수집 API를 구현했습니다.
   - `test_analyze_embed_url`: embed URL 지원
 
 ### 2. 서비스 레이어
-- **파일**: `/Users/futurewave/Documents/dev/zettel/backend/app/services/comment_collector.py`
+- **파일**: `/Users/futurewave/Documents/dev/viewpulse/backend/app/services/comment_collector.py`
 - **주요 기능**:
   - `collect_comments()`: YouTube 영상 댓글 수집
   - `_extract_video_id()`: 다양한 YouTube URL 형식에서 video_id 추출
@@ -27,7 +27,7 @@ TDD 워크플로우를 따라 YouTube 댓글 수집 API를 구현했습니다.
   - `https://m.youtube.com/watch?v=VIDEO_ID`
 
 ### 3. API 엔드포인트
-- **파일**: `/Users/futurewave/Documents/dev/zettel/backend/app/api/v1/endpoints.py`
+- **파일**: `/Users/futurewave/Documents/dev/viewpulse/backend/app/api/v1/endpoints.py`
 - **엔드포인트**: `POST /api/v1/comments/analyze`
 - **Request Body**:
   ```json
@@ -58,19 +58,19 @@ TDD 워크플로우를 따라 YouTube 댓글 수집 API를 구현했습니다.
   ```
 
 ### 4. 스키마 수정
-- **파일**: `/Users/futurewave/Documents/dev/zettel/backend/app/schemas/comment.py`
+- **파일**: `/Users/futurewave/Documents/dev/viewpulse/backend/app/schemas/comment.py`
 - **변경사항**: `sentiment` 필드를 Optional로 변경 (T2.2에서 구현 예정)
 
 ### 5. 기타 수정
-- **파일**: `/Users/futurewave/Documents/dev/zettel/backend/app/routers/youtube.py`
+- **파일**: `/Users/futurewave/Documents/dev/viewpulse/backend/app/routers/youtube.py`
 - **수정**: Path 파라미터 타입 힌트 수정 (Query → Path)
-- **파일**: `/Users/futurewave/Documents/dev/zettel/backend/app/services/keyword_analyzer.py`
+- **파일**: `/Users/futurewave/Documents/dev/viewpulse/backend/app/services/keyword_analyzer.py`
 - **수정**: Python 3.9 호환성을 위한 타입 힌트 수정 (| None → Optional)
 
 ## 테스트 결과
 
 ```bash
-cd /Users/futurewave/Documents/dev/zettel/backend
+cd /Users/futurewave/Documents/dev/viewpulse/backend
 python3 -m pytest tests/api/test_comments.py -v
 ```
 

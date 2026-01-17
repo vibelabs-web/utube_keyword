@@ -22,14 +22,14 @@ YOUTUBE_API_KEY=YOUR_API_KEY_HERE
 ### 1. 서비스 단독 테스트
 
 ```bash
-cd /Users/futurewave/Documents/dev/zettel
+cd /Users/futurewave/Documents/dev/viewpulse
 python backend/test_youtube_service.py
 ```
 
 ### 2. FastAPI 서버 시작
 
 ```bash
-cd /Users/futurewave/Documents/dev/zettel/backend
+cd /Users/futurewave/Documents/dev/viewpulse/backend
 uvicorn app.main:app --reload --port 8000
 ```
 

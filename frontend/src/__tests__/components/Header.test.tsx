@@ -10,7 +10,7 @@ const wrapper = ({ children }: { children: React.ReactNode }) => (
 describe('Header', () => {
   it('renders logo/title', () => {
     render(<Header />, { wrapper });
-    expect(screen.getByText(/Zettel/i)).toBeInTheDocument();
+    expect(screen.getByText(/ViewPulse/i)).toBeInTheDocument();
   });
 
   it('renders navigation tabs', () => {

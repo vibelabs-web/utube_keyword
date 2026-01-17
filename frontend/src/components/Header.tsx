@@ -16,7 +16,7 @@ export default function Header() {
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
             aria-label="홈으로 이동"
           >
-            <span className="text-xl sm:text-2xl font-bold text-slate-900">Zettel</span>
+            <span className="text-xl sm:text-2xl font-bold text-slate-900">ViewPulse</span>
             <span className="hidden sm:inline text-sm text-slate-500">YouTube 분석</span>
           </NavLink>
 

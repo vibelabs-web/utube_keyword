@@ -1,7 +1,7 @@
 # Project Memory
 
 ## 기본 정보
-- 프로젝트명: zettel (유튜브 키워드 분석기 & 댓글 분석기)
+- 프로젝트명: viewpulse (유튜브 키워드 분석기 & 댓글 분석기)
 - 기술 스택: FastAPI + React + SQLite
 - 시작일: 2024-01-17
 

@@ -46,7 +46,7 @@
 ## 2. 프로젝트 구조
 
 ```
-zettel/
+viewpulse/
 ├── frontend/                    # React 프론트엔드
 │   ├── src/
 │   │   ├── components/         # 재사용 컴포넌트
@@ -383,7 +383,7 @@ class Settings(BaseSettings):
     youtube_api_key: str
 
     # Database
-    database_url: str = "sqlite:///./zettel.db"
+    database_url: str = "sqlite:///./viewpulse.db"
 
     # App
     debug: bool = False
@@ -412,12 +412,12 @@ def get_settings() -> Settings:
 ```bash
 # .env.example (커밋 O)
 YOUTUBE_API_KEY=your-youtube-api-key-here
-DATABASE_URL=sqlite:///./zettel.db
+DATABASE_URL=sqlite:///./viewpulse.db
 DEBUG=false
 
 # .env (커밋 X)
 YOUTUBE_API_KEY=AIza...실제키
-DATABASE_URL=sqlite:///./zettel.db
+DATABASE_URL=sqlite:///./viewpulse.db
 DEBUG=true
 ```
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This test suite provides comprehensive testing for the Zettel backend API using pytest and pytest-asyncio.
+This test suite provides comprehensive testing for the ViewPulse backend API using pytest and pytest-asyncio.
 
 ## Test Structure
 
@@ -23,7 +23,7 @@ tests/
 ### Install Dependencies
 
 ```bash
-cd /Users/futurewave/Documents/dev/zettel/backend
+cd /Users/futurewave/Documents/dev/viewpulse/backend
 source venv/bin/activate
 pip install -r requirements.txt
 ```

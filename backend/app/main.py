@@ -8,7 +8,7 @@ from app.routers import youtube, comments
 # FastAPI app instance
 app = FastAPI(
     title="ViewPulse API",
-    description="Backend API for Zettel - YouTube Transcript Note-taking System",
+    description="Backend API for ViewPulse - YouTube Transcript Note-taking System",
     version="0.1.0",
     docs_url="/docs",
     redoc_url="/redoc"
@@ -47,7 +47,7 @@ async def shutdown_event():
 @app.get("/")
 async def root():
     return {
-        "message": "Welcome to Zettel API",
+        "message": "Welcome to ViewPulse API",
         "docs": "/docs",
         "health": "/health"
     }

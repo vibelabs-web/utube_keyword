@@ -298,7 +298,7 @@ Response:
 ## 9. 프로젝트 구조
 
 ```
-zettel/
+viewpulse/
 ├── frontend/
 │   ├── src/
 │   │   ├── components/       # 재사용 컴포넌트

@@ -304,8 +304,8 @@ flowchart TD
 **Git Worktree 설정**:
 ```bash
 # 1. Worktree 생성
-git worktree add ../zettel-phase1-keyword-api -b phase/1-keyword-api
-cd ../zettel-phase1-keyword-api
+git worktree add ../viewpulse-phase1-keyword-api -b phase/1-keyword-api
+cd ../viewpulse-phase1-keyword-api
 ```
 
 **TDD 사이클**:
@@ -356,7 +356,7 @@ git add -A && git commit -m "$(cat <<'EOF'
 EOF
 )"
 git checkout main && git merge phase/1-keyword-api --no-ff -m "병합: Phase 1 - 키워드 분석 API"
-git worktree remove ../zettel-phase1-keyword-api && git branch -d phase/1-keyword-api
+git worktree remove ../viewpulse-phase1-keyword-api && git branch -d phase/1-keyword-api
 ```
 
 ---
@@ -369,8 +369,8 @@ git worktree remove ../zettel-phase1-keyword-api && git branch -d phase/1-keywor
 
 **Git Worktree 설정**:
 ```bash
-git worktree add ../zettel-phase1-related-keywords -b phase/1-related-keywords
-cd ../zettel-phase1-related-keywords
+git worktree add ../viewpulse-phase1-related-keywords -b phase/1-related-keywords
+cd ../viewpulse-phase1-related-keywords
 ```
 
 **TDD 사이클**:
@@ -410,8 +410,8 @@ cd ../zettel-phase1-related-keywords
 
 **Git Worktree 설정**:
 ```bash
-git worktree add ../zettel-phase1-keyword-ui -b phase/1-keyword-ui
-cd ../zettel-phase1-keyword-ui
+git worktree add ../viewpulse-phase1-keyword-ui -b phase/1-keyword-ui
+cd ../viewpulse-phase1-keyword-ui
 ```
 
 **TDD 사이클**:
@@ -452,8 +452,8 @@ cd ../zettel-phase1-keyword-ui
 
 **Git Worktree 설정**:
 ```bash
-git worktree add ../zettel-phase1-keyword-result -b phase/1-keyword-result
-cd ../zettel-phase1-keyword-result
+git worktree add ../viewpulse-phase1-keyword-result -b phase/1-keyword-result
+cd ../viewpulse-phase1-keyword-result
 ```
 
 **작업 내용**:
@@ -483,8 +483,8 @@ cd ../zettel-phase1-keyword-result
 
 **Git Worktree 설정**:
 ```bash
-git worktree add ../zettel-phase2-comment-api -b phase/2-comment-api
-cd ../zettel-phase2-comment-api
+git worktree add ../viewpulse-phase2-comment-api -b phase/2-comment-api
+cd ../viewpulse-phase2-comment-api
 ```
 
 **TDD 사이클**:
@@ -525,8 +525,8 @@ cd ../zettel-phase2-comment-api
 
 **Git Worktree 설정**:
 ```bash
-git worktree add ../zettel-phase2-text-analysis -b phase/2-text-analysis
-cd ../zettel-phase2-text-analysis
+git worktree add ../viewpulse-phase2-text-analysis -b phase/2-text-analysis
+cd ../viewpulse-phase2-text-analysis
 ```
 
 **작업 내용**:
@@ -555,8 +555,8 @@ cd ../zettel-phase2-text-analysis
 
 **Git Worktree 설정**:
 ```bash
-git worktree add ../zettel-phase2-comment-ui -b phase/2-comment-ui
-cd ../zettel-phase2-comment-ui
+git worktree add ../viewpulse-phase2-comment-ui -b phase/2-comment-ui
+cd ../viewpulse-phase2-comment-ui
 ```
 
 **작업 내용**:
@@ -585,8 +585,8 @@ cd ../zettel-phase2-comment-ui
 
 **Git Worktree 설정**:
 ```bash
-git worktree add ../zettel-phase2-comment-result -b phase/2-comment-result
-cd ../zettel-phase2-comment-result
+git worktree add ../viewpulse-phase2-comment-result -b phase/2-comment-result
+cd ../viewpulse-phase2-comment-result
 ```
 
 **작업 내용**:
@@ -618,8 +618,8 @@ cd ../zettel-phase2-comment-result
 
 **Git Worktree 설정**:
 ```bash
-git worktree add ../zettel-phase3-navigation -b phase/3-navigation
-cd ../zettel-phase3-navigation
+git worktree add ../viewpulse-phase3-navigation -b phase/3-navigation
+cd ../viewpulse-phase3-navigation
 ```
 
 **작업 내용**:
@@ -647,8 +647,8 @@ cd ../zettel-phase3-navigation
 
 **Git Worktree 설정**:
 ```bash
-git worktree add ../zettel-phase3-error -b phase/3-error
-cd ../zettel-phase3-error
+git worktree add ../viewpulse-phase3-error -b phase/3-error
+cd ../viewpulse-phase3-error
 ```
 
 **작업 내용**:
@@ -676,8 +676,8 @@ cd ../zettel-phase3-error
 
 **Git Worktree 설정**:
 ```bash
-git worktree add ../zettel-phase3-loading -b phase/3-loading
-cd ../zettel-phase3-loading
+git worktree add ../viewpulse-phase3-loading -b phase/3-loading
+cd ../viewpulse-phase3-loading
 ```
 
 **작업 내용**:
@@ -707,8 +707,8 @@ cd ../zettel-phase3-loading
 
 **Git Worktree 설정**:
 ```bash
-git worktree add ../zettel-phase4-e2e -b phase/4-e2e
-cd ../zettel-phase4-e2e
+git worktree add ../viewpulse-phase4-e2e -b phase/4-e2e
+cd ../viewpulse-phase4-e2e
 ```
 
 **작업 내용**:
@@ -737,8 +737,8 @@ cd ../zettel-phase4-e2e
 
 **Git Worktree 설정**:
 ```bash
-git worktree add ../zettel-phase4-final -b phase/4-final
-cd ../zettel-phase4-final
+git worktree add ../viewpulse-phase4-final -b phase/4-final
+cd ../viewpulse-phase4-final
 ```
 
 **작업 내용**:

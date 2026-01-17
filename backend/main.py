@@ -7,7 +7,7 @@ from app.api.v1 import api_router
 
 
 app = FastAPI(
-    title="Zettel API",
+    title="ViewPulse API",
     description="YouTube Content Analysis API - Keyword & Comment Analysis",
     version="0.1.0",
     docs_url="/docs",
@@ -33,7 +33,7 @@ async def health_check():
     """Health check endpoint."""
     return {
         "status": "ok",
-        "message": "Zettel API is running",
+        "message": "ViewPulse API is running",
         "version": "0.1.0"
     }
 

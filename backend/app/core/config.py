@@ -3,7 +3,7 @@ from typing import Optional
 
 class Settings(BaseSettings):
     # Database
-    DATABASE_URL: str = "sqlite+aiosqlite:///./zettel.db"
+    DATABASE_URL: str = "sqlite+aiosqlite:///./viewpulse.db"
 
     # Security
     SECRET_KEY: str = "changeme-in-production"

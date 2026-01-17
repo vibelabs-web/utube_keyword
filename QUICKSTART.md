@@ -1,4 +1,4 @@
-# Zettel - 빠른 시작 가이드
+# ViewPulse - 빠른 시작 가이드
 
 프로젝트를 5분 안에 실행하는 방법
 
@@ -14,7 +14,7 @@
 
 ```bash
 # 프로젝트 루트
-cd /Users/futurewave/Documents/dev/zettel
+cd /Users/futurewave/Documents/dev/viewpulse
 cp .env.example .env
 
 # .env 파일 편집
@@ -57,7 +57,7 @@ npm run dev
 ### 1단계: 환경 변수 설정
 
 ```bash
-cd /Users/futurewave/Documents/dev/zettel
+cd /Users/futurewave/Documents/dev/viewpulse
 cp .env.example .env
 
 # .env 파일 편집
@@ -84,7 +84,7 @@ docker compose up --build
 ### 백엔드 헬스체크
 ```bash
 curl http://localhost:8000/health
-# {"status":"healthy","service":"zettel-api","version":"0.1.0"}
+# {"status":"healthy","service":"viewpulse-api","version":"0.1.0"}
 ```
 
 ### API 문서
@@ -163,6 +163,6 @@ docker compose up --build
 
 ## 도움이 필요하신가요?
 
-- GitHub Issues: https://github.com/username/zettel/issues
+- GitHub Issues: https://github.com/username/viewpulse/issues
 - 백엔드 문서: [backend/QUICKSTART.md](./backend/QUICKSTART.md)
 - 프론트엔드 문서: [frontend/README.md](./frontend/README.md)
